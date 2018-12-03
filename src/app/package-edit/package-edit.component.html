@@ -1,0 +1,184 @@
+<div class="package-edit-page page-content-wrapper">
+    <div class="page-content">
+        <div class="container">
+            <app-page-top-bar></app-page-top-bar>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="card-box">
+                        <div class="card-head">
+                            <header>Edit Package</header>
+                            <button id="panel-button" class="mdl-button mdl-js-button mdl-button--icon pull-right collapsed" data-target=".mdl-button-collapse" data-toggle="collapse" aria-expanded="false">
+                                         <i class="material-icons">more_vert</i>
+                                      </button>
+                            <div class="mdl-menu_container mdl-button-collapse collapse">
+                                <div class="mdl-menu_outline mdl-menu--bottom-right"></div>
+                                <ul class="navbar-item-container mdl-button-collapse collapse mdl-menu mdl-menu--bottom-right mdl-js-menu  --ignore-events" data-mdl-for="panel-button">
+                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                                        <a class="nav-link" routerlink="/#">
+                                            <i class="material-icons">assistant_photo</i>
+                                            <p>Action</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                                        <a class="nav-link" routerlink="/#">
+                                            <i class="material-icons">print</i>
+                                            <p>Another action</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                                        <a class="nav-link" routerlink="/#">
+                                            <i class="material-icons">favorite</i>
+                                            <p>Something else here</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body row">
+                            <form id="packageEditForm" class="packageEditForm" name="packageEditForm" action="" method="POST">
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" value="Nepal-dubai" id="Package Name">
+                                        <label class="mdl-textfield_label">Package Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="number" value="8900" id="Price">
+                                        <label class="mdl-textfield_label">Price</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" value="13 Days 12 Night" id="duration">
+                                        <label class="mdl-textfield_label">Duration</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" value="4,000" id="altitude">
+                                        <label class="mdl-textfield_label">Altitude</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-t-20">
+                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label for="list3" class="mdl-textfield_label floating-label">Season</label>
+                                        <select class="custom-select mdl-textfield_input" id="season">
+                                            <option selected>Choose...</option>
+                                            <option value="Fall" selected>Fall</option>
+                                            <option value="Autumn">Autumn</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-t-20">
+                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label for="list3" class="mdl-textfield_label floating-label">Package Type</label>
+                                        <select class="custom-select mdl-textfield_input" id="packageType">
+                                            <option selected>Choose...</option>
+                                            <option value="Inbound" >Inbound</option>
+                                            <option value="Outbound" selected>Outbound</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 p-t-20">
+                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label for="list3" class="mdl-textfield_label floating-label">Difficulty</label>
+                                        <select class="custom-select mdl-textfield_input" id="difficulty">
+                                            <option selected>Choose...</option>
+                                            <option value="Normal">Normal</option>
+                                            <option value="Medium" selected>Medium</option>
+                                            <option value="High">High</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" value="4.5" id="rating">
+                                        <label class="mdl-textfield_label">Rating</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" value="8200" id="festivalPrice">
+                                        <label class="mdl-textfield_label">Festival Price</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
+                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label class="mdl-textfield_label floating-label">Festival Offer</label>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="festivalOffer" checked="checked">Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="festivalOffer">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
+                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label class="mdl-textfield_label floating-label">Special Deal</label>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="specialDeal" checked="checked">Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="specialDeal">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
+                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label class="mdl-textfield_label floating-label">Feature Deal</label>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="featureDeal">Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                              <input type="radio" class="form-check-input" name="featureDeal" checked="checked">No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
+                                    <div class="status-slider">
+                                        <label class="mdl-textfield_label floating-label" for="text7">Toggle</label>
+                                        <input type="checkbox" id="switch" class="mdl-textfield_input" name="" checked="checked" />
+                                        <label for="switch" class="switch"></label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 p-t-20">
+                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
+                                        <label class="mdl-textfield_label floating-label" for="text7">Description</label>
+                                        <textarea class="mdl-textfield_input" name="" rows="4" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 p-t-20">
+                                    <label class="control-label col-md-3">Upload Photo</label>
+                                    <form id="coverPhotoForm" class="coverPhotoForm">
+                                        <div class="coverPhotoForm-conatiner">
+                                            <input type="file" class="coverPhoto" id="coverPhoto">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-12 p-t-20 text-center">
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised  m-b-10 m-r-20 fill-primary" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button_ripple-container"><span class="mdl-ripple"></span></span></button>
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised  m-b-10 btn-default" data-upgraded=",MaterialButton,MaterialRipple">Cancel<span class="mdl-button_ripple-container"><span class="mdl-ripple"></span></span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
