@@ -28,6 +28,7 @@ import { CustomerReviewViewComponent } from './customer-review-view/customer-rev
 import { PackageTypeComponent } from './package-type/package-type.component';
 import { PackageTypeAddComponent } from './package-type-add/package-type-add.component';
 import { PackageTypeEditComponent } from './package-type-edit/package-type-edit.component';
+import { SiteinfoEditComponent } from './siteinfo-edit/siteinfo-edit.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { PackageTypeEditComponent } from './package-type-edit/package-type-edit.
     CustomerReviewViewComponent,
     PackageTypeComponent,
     PackageTypeAddComponent,
-    PackageTypeEditComponent
+    PackageTypeEditComponent,
+    SiteinfoEditComponent
   ],
   imports: [
     routes,

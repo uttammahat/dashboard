@@ -23,6 +23,7 @@ import { CustomerReviewViewComponent } from './customer-review-view/customer-rev
 import { PackageTypeComponent } from './package-type/package-type.component';
 import { PackageTypeAddComponent } from './package-type-add/package-type-add.component';
 import { PackageTypeEditComponent } from './package-type-edit/package-type-edit.component';
+import { SiteinfoEditComponent } from './siteinfo-edit/siteinfo-edit.component';
 
 
 export const router: Routes = [
@@ -50,6 +51,7 @@ export const router: Routes = [
     { path: 'packageType', component: PackageTypeComponent },
     { path: 'packageTypeAdd', component: PackageTypeAddComponent },
     { path: 'packageTypeEdit', component: PackageTypeEditComponent },
+    { path: 'siteinfoEdit', component: SiteinfoEditComponent }
 
 
 ];
