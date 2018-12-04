@@ -1,3 +1,4 @@
+@import '../../scss/mixin';
 .inbox .card-head header {
     padding: 0;
 }
@@ -5,7 +6,8 @@
 .mail-list {
     overflow-x: hidden;
     overflow-y: auto;
-    background: #ffffff;
+    background: $white-color;
+    color: $text-dark;
 }
 
 .mail-sender {
@@ -30,7 +32,7 @@ h4.vew-mail-header b {
 }
 
 .text-muted {
-    color: #919aa3 !important;
+    color: $text-dark !important;
     margin-bottom: 10px;
     font-size: 1.4rem;
 }

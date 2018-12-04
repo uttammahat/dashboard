@@ -316,6 +316,13 @@ ul.empListWindow li .prog-avatar img {
     padding-top: 10px;
 }
 
+.details {
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .clsAvailable {
     color: $success-color;
     font-size: 13px;

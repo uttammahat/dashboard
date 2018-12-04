@@ -25,6 +25,9 @@ import { UsersEditComponent } from './users-edit/users-edit.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CustomerReviewComponent } from './customer-review/customer-review.component';
 import { CustomerReviewViewComponent } from './customer-review-view/customer-review-view.component';
+import { PackageTypeComponent } from './package-type/package-type.component';
+import { PackageTypeAddComponent } from './package-type-add/package-type-add.component';
+import { PackageTypeEditComponent } from './package-type-edit/package-type-edit.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { CustomerReviewViewComponent } from './customer-review-view/customer-rev
     UsersEditComponent,
     UserProfileComponent,
     CustomerReviewComponent,
-    CustomerReviewViewComponent
+    CustomerReviewViewComponent,
+    PackageTypeComponent,
+    PackageTypeAddComponent,
+    PackageTypeEditComponent
   ],
   imports: [
     routes,

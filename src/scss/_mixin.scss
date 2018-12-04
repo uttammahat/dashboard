@@ -34,6 +34,12 @@
     position: $pos;
 }
 
+@mixin position-absolute-top-left ($top: 0, $left: 0) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
 @mixin position-absolute ($top: auto, $right: auto, $bottom: auto, $left: auto) {
     position: absolute;
     top: $top;
@@ -82,16 +88,27 @@
     justify-content: flex-start;
 }
 
+@mixin align-content {
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
 @mixin align-items-center {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
 }
 
-@mixin align-item-flex-start {
+@mixin align-items-flex-start {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+}
+
+@mixin align-items-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
 }
 
 @mixin flex-wrap($flex-wrap) {
@@ -109,10 +126,10 @@
     box-shadow: $box-shadow;
 }
 
-@mixin transition {
-    -webkit-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+@mixin transition($transition-property: all, $transition-duration: 0.4s, $transition-timing-function:ease) {
+    -webkit-transition: $transition-property $transition-duration $transition-timing-function;
+    -o-transition: $transition-property $transition-duration $transition-timing-function;
+    transition: $transition-property $transition-duration $transition-timing-function;
 }
 
 // generic transform
@@ -157,23 +174,9 @@
     margin-right: auto;
 }
 
-@mixin cartBtn {
-    font-size: 1.2rem;
-    color: $text-color;
-    text-transform: uppercase;
-    background-color: $btn-color;
-    font-weight: 700;
-    letter-spacing: .1rem;
-    padding: .8rem 0;
-}
-
-@mixin buyNow {
-    font-size: 1.2rem;
-    color: $text-color;
-    text-transform: uppercase;
-    background-color: $btn-color;
-    font-weight: 700;
-    letter-spacing: .1rem;
-    padding: 1rem 0;
-    width: 150px;
+@mixin btn-edit-delete {
+    border-radius: 50% !important;
+    padding: 5px !important;
+    color: $white-color !important;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }

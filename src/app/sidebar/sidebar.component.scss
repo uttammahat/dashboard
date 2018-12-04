@@ -380,13 +380,8 @@
 
 .sub-menu .nav-item:hover a,
 .sub-menu .nav-item.active a {
-    color: $text-dark !important;
+    color: $white-color !important;
     background: $fill-primary;
-    opacity: 1;
-}
-
-.sub-menu .nav-item:hover a .sub-title {
-    color: $text-light-secondary !important;
     opacity: 1;
 }
 

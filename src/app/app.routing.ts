@@ -19,6 +19,10 @@ import { PackageCategoriesAddComponent } from './package-categories-add/package-
 import { PackageCategoriesEditComponent } from './package-categories-edit/package-categories-edit.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CustomerReviewComponent } from './customer-review/customer-review.component';
+import { CustomerReviewViewComponent } from './customer-review-view/customer-review-view.component';
+import { PackageTypeComponent } from './package-type/package-type.component';
+import { PackageTypeAddComponent } from './package-type-add/package-type-add.component';
+import { PackageTypeEditComponent } from './package-type-edit/package-type-edit.component';
 
 
 export const router: Routes = [
@@ -41,7 +45,11 @@ export const router: Routes = [
     { path: 'packageCategoriesAdd', component: PackageCategoriesAddComponent },
     { path: 'packageCategoriesEdit', component: PackageCategoriesEditComponent },
     { path: 'userProfile', component: UserProfileComponent },
-    { path: 'customerReview', component: CustomerReviewComponent }
+    { path: 'customerReview', component: CustomerReviewComponent },
+    { path: 'customerReviewView', component: CustomerReviewViewComponent },
+    { path: 'packageType', component: PackageTypeComponent },
+    { path: 'packageTypeAdd', component: PackageTypeAddComponent },
+    { path: 'packageTypeEdit', component: PackageTypeEditComponent },
 
 
 ];

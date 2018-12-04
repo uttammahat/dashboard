@@ -864,12 +864,6 @@ ul.dropdown-menu li:hover p {
 }
 
 @media (max-width:480px) {
-    .page-header.navbar .top-menu {
-        background-color: #1C262F;
-    }
-    .page-header-fixed-mobile .page-header.navbar .top-menu {
-        background-color: #2b3643;
-    }
     .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle {}
     .page-header-fixed-mobile .page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-toggle {
         background: 0 0;
