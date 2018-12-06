@@ -1,0 +1,78 @@
+<div class="compose-client-msg-page page-content-wrapper">
+    <div class="page-content">
+        <div class="container">
+            <app-page-top-bar></app-page-top-bar>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-body no-padding height-9">
+                            <div class="inbox">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card-head">
+                                            <header>New Message</header>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="inbox-body">
+                                                    <div class="mail-list">
+                                                        <div class="compose-mail">
+                                                            <form method="post">
+                                                                <div class="form-group">
+                                                                    <label for="to" class="">To:</label>
+                                                                    <input type="text" tabindex="1" id="to" class="form-control">
+                                                                    <div class="compose-options">
+                                                                        <a onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();" href="javascript:;">Cc</a>
+                                                                        <a onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();" href="javascript:;">Bcc</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group hidden">
+                                                                    <label for="cc" class="">Cc:</label>
+                                                                    <input type="text" tabindex="2" id="cc" class="form-control">
+                                                                </div>
+                                                                <div class="form-group hidden">
+                                                                    <label for="bcc" class="">Bcc:</label>
+                                                                    <input type="text" tabindex="2" id="bcc" class="form-control">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="subject" class="">Subject:</label>
+                                                                    <input type="text" tabindex="1" id="subject" class="form-control">
+                                                                </div>
+                                                                <div class="compose-editor">
+                                                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
+                                                                        <label class="mdl-textfield_label floating-label" for="text7">Overview</label>
+                                                                        <ckeditor [(ngModel)]=this.overview id="tripOverview" name="tripOverview" #tripOverview required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                                                        </ckeditor>
+                                                                    </div>
+                                                                    <input type="file" class="default" multiple="">
+                                                                </div>
+                                                                <div class="btn-group mt-4">
+                                                                    <button class="btn btn-sm btn-primary">
+                                                                            <i class="fa fa-check"></i> 
+                                                                            Send
+                                                                        </button>
+                                                                    <button class="btn btn-sm btn-default">
+                                                                            <i class="fa fa-times"></i> 
+                                                                            Discard
+                                                                        </button>
+                                                                </div>
+                                                                <div class="btn-group mt-4">
+                                                                    <button class="btn btn-sm btn-default margin-right-10">Draft</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

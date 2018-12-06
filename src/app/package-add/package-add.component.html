@@ -61,13 +61,24 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
-                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
-                                        <label for="list3" class="mdl-textfield_label floating-label">Season</label>
-                                        <select class="custom-select mdl-textfield_input" id="season">
-                                            <option selected>Choose...</option>
-                                            <option value="Fall">Fall</option>
-                                            <option value="Autumn">Autumn</option>
-                                          </select>
+                                    <div class="checkbox-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label class="mdl-textfield_label floating-label">Season</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="summer">
+                                            <label class="form-check-label" for="inlineCheckbox1">Summer</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="winter">
+                                            <label class="form-check-label" for="inlineCheckbox2">Winter</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="autumn">
+                                            <label class="form-check-label" for="inlineCheckbox3">Autumn</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="spring">
+                                            <label class="form-check-label" for="inlineCheckbox4">Spring</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
@@ -90,16 +101,16 @@
                                           </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-t-20">
+                                <div class="col-lg-4 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
                                         <input class="mdl-textfield_input" name="" type="text" id="rating">
                                         <label class="mdl-textfield_label">Rating</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-t-20">
+                                <div class="col-lg-8 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
-                                        <input class="mdl-textfield_input" name="" type="text" id="festivalPrice">
-                                        <label class="mdl-textfield_label">Festival Price</label>
+                                        <input class="mdl-textfield_input" name="" type="text" id="keyword">
+                                        <label class="mdl-textfield_label">Keyword</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
@@ -117,7 +128,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" id="festivalPrice">
+                                        <label class="mdl-textfield_label">Festival Price</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p-t-20">
                                     <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
                                         <label class="mdl-textfield_label floating-label">Special Deal</label>
                                         <div class="form-check-inline">
@@ -147,30 +164,67 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
-                                    <div class="status-slider">
-                                        <label class="mdl-textfield_label floating-label" for="text7">Toggle</label>
-                                        <input type="checkbox" id="switch" class="mdl-textfield_input" name="" />
-                                        <label for="switch" class="switch"></label>
-                                    </div>
-                                </div>
                                 <div class="col-lg-12 p-t-20">
                                     <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
-                                        <label class="mdl-textfield_label floating-label" for="text7">Description</label>
-                                        <textarea class="mdl-textfield_input" name="" rows="4" id="description"></textarea>
+                                        <label class="mdl-textfield_label floating-label" for="text7">Overview</label>
+                                        <ckeditor [(ngModel)]=this.overview id="tripOverview" name="tripOverview" #tripOverview required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                        </ckeditor>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 p-t-20">
+                                <div class="col-lg-12 p-t-20 p-b-20">
                                     <label class="control-label col-md-3">Upload Photo</label>
                                     <form id="coverPhotoForm" class="fileUploadForm">
                                         <div class="fileUploadForm-conatiner">
-                                            <input type="file" class="coverPhoto" id="coverPhoto">
+                                            <input type="file" multiple class="coverPhoto" id="coverPhoto">
                                         </div>
                                     </form>
                                 </div>
+                                <div class="dashed-divider p-t-20"></div>
+                                <div class="col-lg-8 p-t-20">
+                                    <a href="#" class="btn btn-tbl-add btn-xs pull-right">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" id="day">
+                                        <label class="mdl-textfield_label">Day</label>
+                                    </div>
+                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
+                                        <label class="mdl-textfield_label floating-label" for="text7">Description</label>
+                                        <ckeditor [(ngModel)]=this.overview id="description" name="description" #description required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                        </ckeditor>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 p-t-20" id="itineraryTable">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Day</th>
+                                                <th>Description</th>
+                                                <th>action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Day </td>
+                                                <td>
+                                                    <p>Arrive at Bali! On arrival, meet and greet by traditional welcome flower and then get transferred to the Hotel for refreshment. As sun goes down, we head for the&nbsp;Cruise in comfort aboard Bali Bounty
+                                                        Cruises 600 passenger catamaran with a cruising speed of up to 30 knots, you may sit back, relax and enjoy full staff service while reading the daily newspaper or viewing our onboard video entertainment,savor
+                                                        a delicious international buffet dinner, then dance the night away at our disco or enjoy our live cabaret show. Return to hotel.
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-tbl-minus btn-xs">
+                                                        <i class="fa fa-minus"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <div class="col-lg-12 p-t-20 text-center">
-                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised  m-b-10 m-r-20 fill-primary" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button_ripple-container"><span class="mdl-ripple"></span></span></button>
-                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised  m-b-10 btn-default" data-upgraded=",MaterialButton,MaterialRipple">Cancel<span class="mdl-button_ripple-container"><span class="mdl-ripple"></span></span></button>
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised m-b-10 m-r-20 fill-primary" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button_ripple-container"><span class="mdl-ripple"></span></span></button>
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised m-b-10 btn-default" data-upgraded=",MaterialButton,MaterialRipple">Cancel<span class="mdl-button_ripple-container"><span class="mdl-ripple"></span></span></button>
                                 </div>
                             </form>
                         </div>

@@ -24,6 +24,10 @@ import { PackageTypeComponent } from './package-type/package-type.component';
 import { PackageTypeAddComponent } from './package-type-add/package-type-add.component';
 import { PackageTypeEditComponent } from './package-type-edit/package-type-edit.component';
 import { SiteinfoEditComponent } from './siteinfo-edit/siteinfo-edit.component';
+import { ComposeClientMsgComponent } from './compose-client-msg/compose-client-msg.component';
+import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
+import { WhatWeDoEditComponent } from './what-we-do-edit/what-we-do-edit.component';
+import { UsersViewComponent } from './users-view/users-view.component';
 
 
 export const router: Routes = [
@@ -51,7 +55,11 @@ export const router: Routes = [
     { path: 'packageType', component: PackageTypeComponent },
     { path: 'packageTypeAdd', component: PackageTypeAddComponent },
     { path: 'packageTypeEdit', component: PackageTypeEditComponent },
-    { path: 'siteinfoEdit', component: SiteinfoEditComponent }
+    { path: 'siteinfoEdit', component: SiteinfoEditComponent },
+    { path: 'composeClientMsg', component: ComposeClientMsgComponent },
+    { path: 'whatWeDo', component: WhatWeDoComponent },
+    { path: 'whatWeDoEdit', component: WhatWeDoEditComponent },
+    { path: 'usersView', component: UsersViewComponent }
 
 
 ];

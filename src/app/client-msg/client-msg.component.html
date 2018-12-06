@@ -12,30 +12,52 @@
                                         <div class="card-head">
                                             <header>Client Message</header>
                                         </div>
+                                        <div class="row p-t-20">
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="dataTables_length" id="example4_length">
+                                                    <label>
+                                                        Show 
+                                                        <select name="example4_length" aria-controls="example4" class="form-control form-control-sm">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                        </select> 
+                                                        entries
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="inbox-body">
                                             <div class="inbox-header">
                                                 <div class="mail-option no-pad-left">
                                                     <div class="btn-group group-padding">
-                                                        <a class="btn mini tooltips" href="#" data-toggle="dropdown" data-placement="top" data-original-title="Refresh"> <i class=" fa fa-refresh fa-lg"></i>
+                                                        <a class="btn mini tooltips" href="#" data-toggle="dropdown" data-placement="top" data-original-title="Refresh">
+                                                            <i class=" fa fa-refresh fa-lg"></i>
                                                         </a>
 
-                                                        <a class="btn mini tooltips" href="#" data-original-title="Trash"> <i class=" fa fa-trash-o fa-lg"></i>
+                                                        <a class="btn mini tooltips" href="#" data-original-title="Trash">
+                                                            <i class=" fa fa-trash-o fa-lg"></i>
                                                         </a>
                                                     </div>
-
-
-                                                    <div class="btn-group pull-right btn-prev-next">
-                                                        <button class="btn btn-sm btn-primary" type="button">
-                                                    <i class="fa fa-chevron-left"></i>
-                                                </button>
-                                                        <button class="btn btn-sm btn-primary" type="button">
-                                                    <i class="fa fa-chevron-right"></i>
-                                                </button>
+                                                    <div id="example4_filter" class="dataTables_filter pull-right">
+                                                        <label>
+                                                            Search:
+                                                            <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example4">
+                                                        </label>
                                                     </div>
+                                                    <!-- <div class="btn-group pull-right btn-prev-next">
+                                                        <button class="btn btn-sm btn-primary" type="button">
+                                                            <i class="fa fa-chevron-left"></i>
+                                                        </button>
+                                                        <button class="btn btn-sm btn-primary" type="button">
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </button>
+                                                    </div> -->
                                                     <!-- <div class="todo-check pull-left m-l-20">
-                                                          <input type="checkbox" value="None" id="todo-check30">
-                                                          <label for="todo-check30"></label>
-                                                        </div> -->
+                                                        <input type="checkbox" value="None" id="todo-check30">
+                                                        <label for="todo-check30"></label>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                             <div class="inbox-body no-pad table-responsive">
@@ -58,10 +80,41 @@
                                                             <td class="view-message client-message">
                                                                 <a routerLink="/clientMsgView">Jatin I found you on LinkedIn.</a>
                                                             </td>
-                                                            <td class="view-message text-right">10:27 AM</td>
+                                                            <td class="view-message text-right">4:15AM, 04 April 2014</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-5">
+                                                <div class="dataTables_info" id="example4_info" role="status" aria-live="polite">Showing 1 to 10 of 16 entries</div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-7">
+                                                <div class="dataTables_paginate paging_simple_numbers" id="example4_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button page-item previous" id="example4_previous">
+                                                            <a href="#" aria-controls="example4" data-dt-idx="0" tabindex="0" class="page-link">
+                                                                        Previous
+                                                                    </a>
+                                                        </li>
+                                                        <li class="paginate_button page-item active">
+                                                            <a href="#" aria-controls="example4" data-dt-idx="1" tabindex="0" class="page-link">
+                                                                        1
+                                                                    </a>
+                                                        </li>
+                                                        <li class="paginate_button page-item ">
+                                                            <a href="#" aria-controls="example4" class="page-link">
+                                                                        2
+                                                                    </a>
+                                                        </li>
+                                                        <li class="paginate_button page-item next" id="example4_next">
+                                                            <a href="#" aria-controls="example4" class="page-link">
+                                                                        Next
+                                                                    </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routes } from './app.routing';
+import { CKEditorModule } from '../../node_modules/ng2-ckeditor';4
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
@@ -29,6 +31,10 @@ import { PackageTypeComponent } from './package-type/package-type.component';
 import { PackageTypeAddComponent } from './package-type-add/package-type-add.component';
 import { PackageTypeEditComponent } from './package-type-edit/package-type-edit.component';
 import { SiteinfoEditComponent } from './siteinfo-edit/siteinfo-edit.component';
+import { ComposeClientMsgComponent } from './compose-client-msg/compose-client-msg.component';
+import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
+import { WhatWeDoEditComponent } from './what-we-do-edit/what-we-do-edit.component';
+import { UsersViewComponent } from './users-view/users-view.component';
 
 @NgModule({
   declarations: [
@@ -58,10 +64,16 @@ import { SiteinfoEditComponent } from './siteinfo-edit/siteinfo-edit.component';
     PackageTypeComponent,
     PackageTypeAddComponent,
     PackageTypeEditComponent,
-    SiteinfoEditComponent
+    SiteinfoEditComponent,
+    ComposeClientMsgComponent,
+    WhatWeDoComponent,
+    WhatWeDoEditComponent,
+    UsersViewComponent
   ],
   imports: [
     routes,
+    FormsModule,
+    CKEditorModule,
     BrowserModule
   ],
   providers: [],

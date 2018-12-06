@@ -57,11 +57,24 @@
                     </ul>
                 </li>
                 <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                    <a routerLink="/siteinfo">
+                    <a class="nav-link nav-toggle sub-menu-toggler" data-target=".siteinfo-collapse" data-toggle="collapse">
                         <!-- <i class="material-icons">info</i> -->
                         <i class="material-icons">description</i>
                         <p>Site Info</p>
+                        <i class="material-icons arrow-rotate">arrow_right</i>
                     </a>
+                    <ul class="sub-menu siteinfo-collapse collapse">
+                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                            <a routerLink="/siteinfo" class="nav-link">
+                                <span class="sub-title">Site Info</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                            <a routerLink="/whatWeDo" class="nav-link">
+                                <span class="sub-title">What We Do</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                     <a class="nav-link nav-toggle sub-menu-toggler" data-target=".package-collapse" data-toggle="collapse">
@@ -157,6 +170,11 @@
                         <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                             <a routerLink="/clientMsgView" class="nav-link">
                                 <span class="sub-title">View Message</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                            <a routerLink="/composeClientMsg" class="nav-link">
+                                <span class="sub-title">Compose Message</span>
                             </a>
                         </li>
                     </ul>

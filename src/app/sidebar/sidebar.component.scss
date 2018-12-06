@@ -388,7 +388,8 @@
 .sub-menu.booking-collapse.collapse,
 .sub-menu.package-collapse.collapse,
 .sub-menu.clientMsg-collapse.collapse,
-.sub-menu.users-collapse.collapse {
+.sub-menu.users-collapse.collapse,
+.sub-menu.siteinfo-collapse.collapse {
     display: none;
     // height: 0;
 }
@@ -400,7 +401,8 @@
 .sub-menu.booking-collapse.collapse.show,
 .sub-menu.package-collapse.collapse.show,
 .sub-menu.clientMsg-collapse.collapse.show,
-.sub-menu.users-collapse.collapse.show {
+.sub-menu.users-collapse.collapse.show,
+.sub-menu.siteinfo-collapse.collapse.show {
     height: auto;
     display: block;
 }

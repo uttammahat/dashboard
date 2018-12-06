@@ -61,22 +61,33 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
-                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
-                                        <label for="list3" class="mdl-textfield_label floating-label">Season</label>
-                                        <select class="custom-select mdl-textfield_input" id="season">
-                                            <option selected>Choose...</option>
-                                            <option value="Fall" selected>Fall</option>
-                                            <option value="Autumn">Autumn</option>
-                                          </select>
+                                    <div class="checkbox-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <label class="mdl-textfield_label floating-label">Season</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="summer">
+                                            <label class="form-check-label" for="inlineCheckbox1">Summer</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="winter">
+                                            <label class="form-check-label" for="inlineCheckbox2">Winter</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="autumn">
+                                            <label class="form-check-label" for="inlineCheckbox3">Autumn</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="spring">
+                                            <label class="form-check-label" for="inlineCheckbox4">Spring</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
                                     <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
                                         <label for="list3" class="mdl-textfield_label floating-label">Package Type</label>
                                         <select class="custom-select mdl-textfield_input" id="packageType">
-                                            <option selected>Choose...</option>
-                                            <option value="Inbound" >Inbound</option>
-                                            <option value="Outbound" selected>Outbound</option>
+                                            <option>Choose...</option>
+                                            <option value="Inbound" selected>Inbound</option>
+                                            <option value="Outbound">Outbound</option>
                                           </select>
                                     </div>
                                 </div>
@@ -84,23 +95,22 @@
                                     <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
                                         <label for="list3" class="mdl-textfield_label floating-label">Difficulty</label>
                                         <select class="custom-select mdl-textfield_input" id="difficulty">
-                                            <option selected>Choose...</option>
-                                            <option value="Normal">Normal</option>
-                                            <option value="Medium" selected>Medium</option>
-                                            <option value="High">High</option>
+                                                <option value="Normal">Normal</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="High">High</option>
                                           </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-t-20">
+                                <div class="col-lg-4 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
-                                        <input class="mdl-textfield_input" name="" type="text" value="4.5" id="rating">
+                                        <input class="mdl-textfield_input" name="" type="text" id="rating">
                                         <label class="mdl-textfield_label">Rating</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 p-t-20">
+                                <div class="col-lg-8 p-t-20">
                                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
-                                        <input class="mdl-textfield_input" name="" type="text" value="8200" id="festivalPrice">
-                                        <label class="mdl-textfield_label">Festival Price</label>
+                                        <input class="mdl-textfield_input" name="" type="text" id="keyword">
+                                        <label class="mdl-textfield_label">Keyword</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
@@ -108,7 +118,7 @@
                                         <label class="mdl-textfield_label floating-label">Festival Offer</label>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="festivalOffer" checked="checked">Yes
+                                              <input type="radio" class="form-check-input" name="festivalOffer">Yes
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
@@ -118,12 +128,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
+                                <div class="col-lg-6 p-t-20">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                        <input class="mdl-textfield_input" name="" type="text" id="festivalPrice">
+                                        <label class="mdl-textfield_label">Festival Price</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p-t-20">
                                     <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
                                         <label class="mdl-textfield_label floating-label">Special Deal</label>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="specialDeal" checked="checked">Yes
+                                              <input type="radio" class="form-check-input" name="specialDeal">Yes
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
@@ -143,30 +159,23 @@
                                         </div>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
-                                              <input type="radio" class="form-check-input" name="featureDeal" checked="checked">No
+                                              <input type="radio" class="form-check-input" name="featureDeal">No
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
-                                    <div class="status-slider">
-                                        <label class="mdl-textfield_label floating-label" for="text7">Toggle</label>
-                                        <input type="checkbox" id="switch" class="mdl-textfield_input" name="" checked="checked" />
-                                        <label for="switch" class="switch"></label>
-                                    </div>
-                                </div>
                                 <div class="col-lg-12 p-t-20">
                                     <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
-                                        <label class="mdl-textfield_label floating-label" for="text7">Description</label>
-                                        <textarea class="mdl-textfield_input" name="" rows="4" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                        </textarea>
+                                        <label class="mdl-textfield_label floating-label" for="text7">Overview</label>
+                                        <ckeditor [(ngModel)]=this.overview id="tripOverview" name="tripOverview" #tripOverview required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                        </ckeditor>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 p-t-20">
                                     <label class="control-label col-md-3">Upload Photo</label>
-                                    <form id="coverPhotoForm" class="coverPhotoForm">
-                                        <div class="coverPhotoForm-conatiner">
-                                            <input type="file" class="coverPhoto" id="coverPhoto">
+                                    <form id="coverPhotoForm" class="fileUploadForm">
+                                        <div class="fileUploadForm-conatiner">
+                                            <input type="file" multiple class="coverPhoto" id="coverPhoto">
                                         </div>
                                     </form>
                                 </div>

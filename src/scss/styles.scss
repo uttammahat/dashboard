@@ -1,6 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'mixin';
+.card-topline-aqua {
+    border-top: 3px solid $primary-color;
+}
+
+.dashed-divider {
+    border-bottom: 2px dashed $border-color;
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.sub-header header {
+    font-size: 1.6rem;
+    color: #aaa;
+}
+
+.list-group-unbordered>.list-group-item {
+    border-left: 0px none;
+    border-right: 0px none;
+    border-radius: 0px 0px 0px 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 1.4rem;
+    color: $primary-color;
+}
+
+.list-group .list-group-item {
+    display: block;
+}
+
+.list-group .list-group-item:first-child {
+    border-top: 0;
+}
+
+.list-group .list-group-item:last-child {
+    border-bottom: 0;
+}
+
+.info-desc-item {
+    text-align: left;
+    font-size: 1.4rem;
+    color: #6f6d6d !important;
+    width: 100%;
+}
+
 
 /* search form */
 
@@ -157,20 +202,29 @@ a.btn.submit {
     @include box-shadow(0px 5px 25px 0px rgba(0, 0, 0, 0.2));
 }
 
+.btn-tbl-view,
 .btn-tbl-edit,
 .btn-tbl-delete,
+.btn-tbl-add,
+.btn-tbl-minus,
 a.box-refresh {
     @include transition;
 }
 
+.btn-tbl-view:hover,
 .btn-tbl-edit:hover,
 .btn-tbl-delete:hover,
+.btn-tbl-add:hover,
+.btn-tbl-minus:hover,
 a.box-refresh:hover {
     opacity: 0.7;
 }
 
+.btn-tbl-view:hover i,
 .btn-tbl-edit:hover i,
 .btn-tbl-delete:hover i,
+.btn-tbl-add:hover i,
+.btn-tbl-minus:hover i,
 a.box-refresh:hover i {
     color: $white-color;
     opacity: 1;
@@ -228,6 +282,10 @@ a.box-refresh:hover i {
     color: $text-dark;
 }
 
+.btn-sm {
+    margin-right: 8px;
+}
+
 .table tr td:last-child {
     @include display-flex;
     @include justify-content-flex-start;
@@ -249,6 +307,7 @@ a.box-refresh:hover i {
     font-size: 1.4rem;
     font-weight: 600;
     color: $text-primary;
+    text-transform: capitalize;
 }
 
 .table td,
@@ -266,7 +325,6 @@ a.box-refresh:hover i {
     padding: 10px 8px;
     vertical-align: middle;
     font-size: 1.5rem;
-    text-transform: capitalize;
 }
 
 .alert,
@@ -355,13 +413,31 @@ a.box-refresh:hover i {
 
 .btn-tbl-delete {
     background-color: $btn-tbl-delete;
-    @include btn-edit-delete;
+    @include btn-tbl;
     @include transition;
 }
 
 .btn-tbl-edit {
     background-color: $btn-tbl-edit;
-    @include btn-edit-delete;
+    @include btn-tbl;
+    @include transition;
+}
+
+.btn-tbl-view {
+    background-color: $btn-tbl-view;
+    @include btn-tbl;
+    @include transition;
+}
+
+.btn-tbl-add {
+    background-color: $success-color;
+    @include btn-tbl;
+    @include transition;
+}
+
+.btn-tbl-minus {
+    background-color: $danger-color;
+    @include btn-tbl;
     @include transition;
 }
 
@@ -387,6 +463,11 @@ a.box-refresh:hover i {
 .btn.btn-xs {
     font-size: 1.1rem;
     padding: 3px 8px;
+}
+
+.btn.btn-sm {
+    font-size: 1.1rem;
+    padding: 6px 18px;
 }
 
 .btn>i {
@@ -801,37 +882,43 @@ li [class^=icon-] {
     margin: 10px 0!important;
 }
 
-div.dataTables_wrapper div.dataTables_length label {
+div.dataTables_length label {
     font-weight: normal;
     text-align: left;
     white-space: nowrap;
     font-size: 1.4rem;
+    color: $text-dark;
 }
 
 select.form-control.form-control-sm {
     height: 30px !important;
 }
 
-div.dataTables_wrapper div.dataTables_length select {
+div.dataTables_length select {
     width: 75px;
     display: inline-block;
 }
 
-div.dataTables_wrapper div.dataTables_filter {
+div.dataTables_filter {
     text-align: right;
 }
 
-div.dataTables_wrapper div.dataTables_filter label {
+div.dataTables_filter label {
     font-weight: normal;
     white-space: nowrap;
     text-align: left;
     font-size: 1.4rem;
+    color: $text-dark;
 }
 
-div.dataTables_wrapper div.dataTables_filter input {
+div.dataTables_filter input {
     margin-left: 0.5em;
     display: inline-block;
     width: auto;
+}
+
+div.dataTables_filter input:focus {
+    border-bottom: 1px solid $text-dark !important;
 }
 
 .dataTables_scroll {
@@ -869,6 +956,57 @@ table.dataTable.no-footer {
 div.dataTables_scrollHead table.dataTable {
     margin-bottom: 0 !important;
     margin-left: 0;
+}
+
+div.dataTables_info {
+    padding-top: 0.85em;
+    white-space: nowrap;
+    font-size: 1.4rem;
+}
+
+div.dataTables_paginate {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+.paging_simple_numbers .page-item.next a,
+.paging_simple_numbers .page-item.previous a {
+    color: $default-color;
+    background-color: $white-color;
+    margin: 5px;
+    text-transform: uppercase;
+    border: 0;
+}
+
+.paging_simple_numbers .page-item.active a {
+    background-color: $primary-color;
+    border-radius: 50%;
+    border-color: $primary-color;
+    margin: 5px;
+    box-shadow: 0 4px 5px 0 rgba(156, 39, 176, 0.14), 0 1px 10px 0 rgba(156, 39, 176, 0.12), 0 2px 4px -1px rgba(156, 39, 176, 0.2);
+    padding: 0px 12px;
+    min-width: 30px;
+    line-height: 30px;
+    color: $white-color;
+    text-transform: uppercase;
+}
+
+.paging_simple_numbers .page-item a {
+    margin: 5px;
+    border-radius: 50%;
+    color: $default-color;
+    margin: 5px;
+    padding: 0px 12px;
+    min-width: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
 }
 
 .full-width {
@@ -915,10 +1053,10 @@ td.user-circle-img {
 }
 
 @media screen and (max-width: 767px) {
-    div.dataTables_wrapper div.dataTables_length,
-    div.dataTables_wrapper div.dataTables_filter,
-    div.dataTables_wrapper div.dataTables_info,
-    div.dataTables_wrapper div.dataTables_paginate {
+    div.dataTables_length,
+    div.dataTables_filter,
+    div.dataTables_info,
+    div.dataTables_paginate {
         text-align: center;
     }
 }
@@ -1257,7 +1395,7 @@ ul.mdl-menu li:hover p {
 }
 
 .mdl-textfield_input+.mdl-textfield_label::after {
-    bottom: -3px !important;
+    bottom: -7px !important;
 }
 
 .mdl-textfield_input:focus+.mdl-textfield_label::after {
@@ -1272,14 +1410,11 @@ ul.mdl-menu li:hover p {
     border-radius: 0;
     display: block;
     font-size: 1.6rem;
-    font-family: "Helvetica", "Arial", sans-serif;
     margin: 0;
     padding: 4px 0;
     width: 100%;
     background: 0 0;
     text-align: left;
-    color: inherit;
-    text-transform: capitalize;
 }
 
 .mdl-textfield textarea.mdl-textfield_input {
@@ -1368,16 +1503,16 @@ textarea:focus {
 }
 
 .fileUploadForm {
-    min-height: 150px;
-    border: 2px dashed rgba(0, 0, 0, 0.3);
+    // min-height: 150px;
+    // border: 2px dashed rgba(0, 0, 0, 0.3);
     background: $white-color;
-    padding: 20px 20px;
+    // padding: 20px 20px;
 }
 
 .fileUploadForm .fileUploadForm-conatiner {
     text-align: center;
-    margin: 2em auto;
-    font-size: 2rem;
+    // margin: 2em auto;
+    font-size: 1.4rem;
     color: $text-dark-secondary;
 }
 
@@ -1585,3 +1720,122 @@ button.btn-default:hover {
 // }
 
 /* client msg closed*/
+
+
+/* user profile and user view */
+
+.users-profile-page .card .card-head {
+    border-bottom: 0;
+}
+
+.profile-sidebar {
+    float: left;
+    width: 350px;
+    margin-right: 20px;
+}
+
+.profile-userpic {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-userpic img {
+    margin: 0px auto;
+    width: 130px;
+    padding: 3px;
+    border: 3px solid rgb(210, 214, 222);
+    border-radius: 50% 50% 50% 50%;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-usertitle-name {
+    font-size: 20px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: #3a405b;
+}
+
+.profile-usertitle-job {
+    color: #b7b6b6;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.profile-content {
+    overflow: hidden;
+}
+
+.profile-tab-box {
+    background: $white-color;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.tab-all a {
+    color: #948f8f;
+    @include transition;
+}
+
+.tab-all a:hover {
+    color: #e91e63;
+}
+
+.tab-all a.active {
+    background-color: #e91e63 !important;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(233, 30, 99, .6);
+    color: $white-color;
+    border-radius: 30px;
+}
+
+.white-box {
+    background: $white-color;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.user-detail {
+    padding: 0 20px;
+}
+
+.user-detail strong {
+    font-size: 15px;
+    color: $text-dark;
+}
+
+.text-muted {
+    color: #919aa3 !important;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.users-profile-page .profile-content .card-body form {
+    display: block;
+}
+
+.users-profile-page .profile-content .card-body form input:focus {
+    border: 1px solid $primary-color !important;
+}
+
+.users-profile-page .profile-content .card-body form label {
+    font-size: 1.4rem;
+    color: $text-dark;
+}
+
+
+/* user profile and user view closed */
