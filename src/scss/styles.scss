@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'mixin';
+.hidden {
+    display: none !important;
+}
+
 .card-topline-aqua {
     border-top: 3px solid $primary-color;
 }
@@ -29,6 +33,10 @@
 
 .list-group .list-group-item {
     display: block;
+}
+
+.list-group .list-group-item b {
+    text-transform: capitalize;
 }
 
 .list-group .list-group-item:first-child {
@@ -1111,9 +1119,10 @@ td.user-circle-img {
 
 .mdl-button--icon .material-icons {
     @include position-absolute-top-left(50%, 50%);
-    @include transform(translate(-12px, -12px));
+    @include transform(translate(-10px, -12px));
     line-height: 24px;
     width: 24px;
+    font-size: 1.6rem;
 }
 
 .mdl-button:hover {
@@ -1839,3 +1848,11 @@ button.btn-default:hover {
 
 
 /* user profile and user view closed */
+
+@media (max-width: 767px) {
+    .profile-sidebar {
+        float: none;
+        width: auto;
+        margin-right: 0px;
+    }
+}

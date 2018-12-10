@@ -6,33 +6,10 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="card-box">
                         <div class="card-head">
+                            <a routerLink="/package" id="panel-button" class="mdl-button mdl-button--icon collapsed">
+                                <i class="material-icons">arrow_back_ios</i>
+                            </a>
                             <header>Edit Package</header>
-                            <button id="panel-button" class="mdl-button mdl-js-button mdl-button--icon pull-right collapsed" data-target=".mdl-button-collapse" data-toggle="collapse" aria-expanded="false">
-                                         <i class="material-icons">more_vert</i>
-                                      </button>
-                            <div class="mdl-menu_container mdl-button-collapse collapse">
-                                <div class="mdl-menu_outline mdl-menu--bottom-right"></div>
-                                <ul class="navbar-item-container mdl-button-collapse collapse mdl-menu mdl-menu--bottom-right mdl-js-menu  --ignore-events" data-mdl-for="panel-button">
-                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                        <a class="nav-link" routerlink="/#">
-                                            <i class="material-icons">assistant_photo</i>
-                                            <p>Action</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                        <a class="nav-link" routerlink="/#">
-                                            <i class="material-icons">print</i>
-                                            <p>Another action</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                        <a class="nav-link" routerlink="/#">
-                                            <i class="material-icons">favorite</i>
-                                            <p>Something else here</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                         <div class="card-body row">
                             <form id="packageEditForm" class="packageEditForm" name="packageEditForm" action="" method="POST">
@@ -167,7 +144,7 @@
                                 <div class="col-lg-12 p-t-20">
                                     <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
                                         <label class="mdl-textfield_label floating-label" for="text7">Overview</label>
-                                        <ckeditor [(ngModel)]=this.overview id="tripOverview" name="tripOverview" #tripOverview required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                        <ckeditor [(ngModel)]=this.overview id="packageDescription" name="packageDescription" #packageDescription required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
                                         </ckeditor>
                                     </div>
                                 </div>
@@ -178,6 +155,49 @@
                                             <input type="file" multiple class="coverPhoto" id="coverPhoto">
                                         </div>
                                     </form>
+                                </div>
+                                <div class="dashed-divider p-t-20"></div>
+                                <div class="col-lg-8 p-t-20">
+                                    <a href="#" class="btn btn-tbl-add btn-xs pull-right">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                        <input class="mdl-textfield_input" name="" type="text" id="day">
+                                        <label class="mdl-textfield_label">Day</label>
+                                    </div>
+                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width">
+                                        <label class="mdl-textfield_label floating-label" for="text7">Description</label>
+                                        <ckeditor [(ngModel)]=this.overview id="description" name="description" #description required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                        </ckeditor>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 p-t-20" id="itineraryTable">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Day</th>
+                                                <th>Description</th>
+                                                <th>action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Day </td>
+                                                <td>
+                                                    <p>Arrive at Bali! On arrival, meet and greet by traditional welcome flower and then get transferred to the Hotel for refreshment. As sun goes down, we head for the&nbsp;Cruise in comfort aboard Bali Bounty
+                                                        Cruises 600 passenger catamaran with a cruising speed of up to 30 knots, you may sit back, relax and enjoy full staff service while reading the daily newspaper or viewing our onboard video entertainment,savor
+                                                        a delicious international buffet dinner, then dance the night away at our disco or enjoy our live cabaret show. Return to hotel.
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="btn btn-tbl-minus btn-xs">
+                                                        <i class="fa fa-minus"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
                                 </div>
                                 <div class="col-lg-12 p-t-20 text-center">
                                     <button type="button" class="mdl-button mdl-js-button mdl-button--raised  m-b-10 m-r-20 fill-primary" data-upgraded=",MaterialButton,MaterialRipple">Submit<span class="mdl-button_ripple-container"><span class="mdl-ripple"></span></span></button>

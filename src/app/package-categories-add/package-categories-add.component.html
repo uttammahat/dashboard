@@ -6,9 +6,10 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="card-box">
                         <div class="card-head">
+                            <a routerLink="/packageCategories" id="panel-button" class="mdl-button mdl-button--icon collapsed">
+                                <i class="material-icons">arrow_back_ios</i>
+                            </a>
                             <header>Add new Packages Categories</header>
-                            <button id="panel-button" class="mdl-button mdl-js-button mdl-button--icon pull-right collapsed" data-target=".mdl-button-collapse" data-toggle="collapse" aria-expanded="false">
-                            </button>
                         </div>
                         <div class="card-body row">
                             <form id="categoriesPackageAddForm" class="categoriesPackageAddForm" name="categoriesPackageAddForm" action="" method="POST">
@@ -19,9 +20,10 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12 p-t-20">
-                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
+                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width">
                                         <label class="mdl-textfield_label floating-label" for="text7">Description</label>
-                                        <textarea class="mdl-textfield_input" name="" rows="4" id="description"></textarea>
+                                        <ckeditor [(ngModel)]=this.overview id="pacakgeCategoriesDescription" name="pacakgeCategoriesDescription" #pacakgeCategoriesDescription required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                        </ckeditor>
                                     </div>
                                 </div>
 

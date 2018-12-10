@@ -11,7 +11,7 @@
             </button>
         </div> -->
 
-        <div class="collapse navbar-collapse side-navbar-collapse sidebar-offcanvas" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse sidebar-offcanvas" id="navbarSupportedContent">
 
             <ul class="navbar-item-container navbar-nav mr-auto">
                 <li class="nav-item">
@@ -49,7 +49,7 @@
                                 <span class="sub-title">Add new user</span>
                             </a>
                         </li>
-                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <li class="nav-item hidden" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                             <a routerLink="/usersEdit" class="nav-link">
                                 <span class="sub-title">Edit user</span>
                             </a>
@@ -94,7 +94,7 @@
                                 <span class="sub-title">Add New Package</span>
                             </a>
                         </li>
-                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <li class="nav-item hidden" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                             <a routerLink="/packageEdit" class="nav-link">
                                 <span class="sub-title">Edit Package</span>
                             </a>
@@ -109,7 +109,7 @@
                                 <span class="sub-title">Add Package Type</span>
                             </a>
                         </li>
-                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <li class="nav-item hidden" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                             <a routerLink="/packageTypeEdit" class="nav-link">
                                 <span class="sub-title">Edit Package Type</span>
                             </a>
@@ -124,7 +124,7 @@
                                 <span class="sub-title">Add Package Categories</span>
                             </a>
                         </li>
-                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <li class="nav-item hidden" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                             <a routerLink="/packageCategoriesEdit" class="nav-link">
                                 <span class="sub-title">Edit Package Categories</span>
                             </a>
@@ -148,7 +148,7 @@
                                 <span class="sub-title">Add New Booking</span>
                             </a>
                         </li>
-                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <li class="nav-item hidden" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                             <a routerLink="/bookingEdit" class="nav-link">
                                 <span class="sub-title">Edit Booking</span>
                             </a>
@@ -167,7 +167,7 @@
                                 <span class="sub-title">Inbox</span>
                             </a>
                         </li>
-                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                        <li class="nav-item hidden" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                             <a routerLink="/clientMsgView" class="nav-link">
                                 <span class="sub-title">View Message</span>
                             </a>
@@ -180,10 +180,42 @@
                     </ul>
                 </li>
                 <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                    <a routerLink="/customerReview">
+                    <a routerLink="/customerReview" class="nav-link nav-toggle sub-menu-toggler" data-target=".customerReview-collapse" data-toggle="collapse">
                         <i class="material-icons">rate_review</i>
                         <p>Customer Review</p>
+                        <i class="material-icons arrow-rotate">arrow_right</i>
                     </a>
+                    <ul class="sub-menu customerReview-collapse collapse">
+                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                            <a routerLink="/customerReview" class="nav-link">
+                                <span class="sub-title">All Customer</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                            <a routerLink="/customerReviewAdd" class="nav-link">
+                                <span class="sub-title">Add Customer Review</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a class="nav-link nav-toggle sub-menu-toggler" data-target=".backgroundImage-collapse" data-toggle="collapse">
+                        <i class="material-icons">collections</i>
+                        <p>Background Image</p>
+                        <i class="material-icons arrow-rotate">arrow_right</i>
+                    </a>
+                    <ul class="sub-menu backgroundImage-collapse collapse">
+                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                            <a routerLink="/backgroundImage" class="nav-link">
+                                <span class="sub-title">All background</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                            <a routerLink="/backgroundImageAdd" class="nav-link">
+                                <span class="sub-title">Add background</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
                     <a routerLink="/login">

@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { routes } from './app.routing';
-import { CKEditorModule } from '../../node_modules/ng2-ckeditor';4
+import { CKEditorModule } from '../../node_modules/ng2-ckeditor';
+
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -35,6 +36,10 @@ import { ComposeClientMsgComponent } from './compose-client-msg/compose-client-m
 import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
 import { WhatWeDoEditComponent } from './what-we-do-edit/what-we-do-edit.component';
 import { UsersViewComponent } from './users-view/users-view.component';
+import { PackageViewComponent } from './package-view/package-view.component';
+import { CustomerReviewAddComponent } from './customer-review-add/customer-review-add.component';
+import { BackgroundImageComponent } from './background-image/background-image.component';
+import { BackgroundImageAddComponent } from './background-image-add/background-image-add.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +73,11 @@ import { UsersViewComponent } from './users-view/users-view.component';
     ComposeClientMsgComponent,
     WhatWeDoComponent,
     WhatWeDoEditComponent,
-    UsersViewComponent
+    UsersViewComponent,
+    PackageViewComponent,
+    CustomerReviewAddComponent,
+    BackgroundImageComponent,
+    BackgroundImageAddComponent
   ],
   imports: [
     routes,

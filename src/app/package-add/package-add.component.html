@@ -6,62 +6,39 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="card-box">
                         <div class="card-head">
+                            <a routerLink="/package" id="panel-button" class="mdl-button mdl-button--icon collapsed">
+                                <i class="material-icons">arrow_back_ios</i>
+                            </a>
                             <header>Add New Package</header>
-                            <button id="panel-button" class="mdl-button mdl-js-button mdl-button--icon pull-right collapsed" data-target=".mdl-button-collapse" data-toggle="collapse" aria-expanded="false">
-                                         <i class="material-icons">more_vert</i>
-                                      </button>
-                            <div class="mdl-menu_container mdl-button-collapse collapse">
-                                <div class="mdl-menu_outline mdl-menu--bottom-right"></div>
-                                <ul class="navbar-item-container mdl-button-collapse collapse mdl-menu mdl-menu--bottom-right mdl-js-menu  --ignore-events" data-mdl-for="panel-button">
-                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                        <a class="nav-link" routerlink="/#">
-                                            <i class="material-icons">assistant_photo</i>
-                                            <p>Action</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                        <a class="nav-link" routerlink="/#">
-                                            <i class="material-icons">print</i>
-                                            <p>Another action</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item mdl-menu_item " [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-                                        <a class="nav-link" routerlink="/#">
-                                            <i class="material-icons">favorite</i>
-                                            <p>Something else here</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                         <div class="card-body row">
                             <form id="packageAddForm" class="packageAddForm" name="packageAddForm" action="" method="POST">
                                 <div class="col-lg-6 p-t-20">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="text" id="Package Name">
                                         <label class="mdl-textfield_label">Package Name</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 p-t-20">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="number" id="Price">
                                         <label class="mdl-textfield_label">Price</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 p-t-20">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="text" id="duration">
                                         <label class="mdl-textfield_label">Duration</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 p-t-20">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="text" id="altitude">
                                         <label class="mdl-textfield_label">Altitude</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
-                                    <div class="checkbox-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="checkbox-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <label class="mdl-textfield_label floating-label">Season</label>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="summer">
@@ -82,7 +59,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
-                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <label for="list3" class="mdl-textfield_label floating-label">Package Type</label>
                                         <select class="custom-select mdl-textfield_input" id="packageType">
                                             <option selected>Choose...</option>
@@ -92,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
-                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="select-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <label for="list3" class="mdl-textfield_label floating-label">Difficulty</label>
                                         <select class="custom-select mdl-textfield_input" id="difficulty">
                                                 <option value="Normal">Normal</option>
@@ -102,19 +79,19 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-4 p-t-20">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="text" id="rating">
                                         <label class="mdl-textfield_label">Rating</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 p-t-20">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="text" id="keyword">
                                         <label class="mdl-textfield_label">Keyword</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
-                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <label class="mdl-textfield_label floating-label">Festival Offer</label>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
@@ -129,13 +106,13 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 p-t-20">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="text" id="festivalPrice">
                                         <label class="mdl-textfield_label">Festival Price</label>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p-t-20">
-                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <label class="mdl-textfield_label floating-label">Special Deal</label>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
@@ -150,7 +127,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 p-t-20">
-                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="radio-input mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <label class="mdl-textfield_label floating-label">Feature Deal</label>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
@@ -165,9 +142,9 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12 p-t-20">
-                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
+                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width">
                                         <label class="mdl-textfield_label floating-label" for="text7">Overview</label>
-                                        <ckeditor [(ngModel)]=this.overview id="tripOverview" name="tripOverview" #tripOverview required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
+                                        <ckeditor [(ngModel)]=this.overview id="packageDescription" name="packageDescription" #packageDescription required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
                                         </ckeditor>
                                     </div>
                                 </div>
@@ -184,11 +161,11 @@
                                     <a href="#" class="btn btn-tbl-add btn-xs pull-right">
                                         <i class="fa fa-plus"></i>
                                     </a>
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width is-upgraded">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                         <input class="mdl-textfield_input" name="" type="text" id="day">
                                         <label class="mdl-textfield_label">Day</label>
                                     </div>
-                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width is-upgraded" data-upgraded=",MaterialTextfield">
+                                    <div class="textarea mdl-textfield mdl-js-textfield txt-full-width">
                                         <label class="mdl-textfield_label floating-label" for="text7">Description</label>
                                         <ckeditor [(ngModel)]=this.overview id="description" name="description" #description required [config]="{uiColor: '#F8F8F8'}" [readonly]="false" debounce="500">
                                         </ckeditor>

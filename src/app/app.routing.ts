@@ -1,5 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
 import { PackageComponent } from './package/package.component';
@@ -28,6 +30,10 @@ import { ComposeClientMsgComponent } from './compose-client-msg/compose-client-m
 import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
 import { WhatWeDoEditComponent } from './what-we-do-edit/what-we-do-edit.component';
 import { UsersViewComponent } from './users-view/users-view.component';
+import { PackageViewComponent } from './package-view/package-view.component';
+import { CustomerReviewAddComponent } from './customer-review-add/customer-review-add.component';
+import { BackgroundImageComponent } from './background-image/background-image.component';
+import { BackgroundImageAddComponent } from './background-image-add/background-image-add.component';
 
 
 export const router: Routes = [
@@ -59,7 +65,11 @@ export const router: Routes = [
     { path: 'composeClientMsg', component: ComposeClientMsgComponent },
     { path: 'whatWeDo', component: WhatWeDoComponent },
     { path: 'whatWeDoEdit', component: WhatWeDoEditComponent },
-    { path: 'usersView', component: UsersViewComponent }
+    { path: 'usersView', component: UsersViewComponent },
+    { path: 'packageView', component: PackageViewComponent },
+    { path: 'customerReviewAdd', component: CustomerReviewAddComponent },
+    { path: 'backgroundImage', component: BackgroundImageComponent },
+    { path: 'backgroundImageAdd', component: BackgroundImageAddComponent }
 
 
 ];
